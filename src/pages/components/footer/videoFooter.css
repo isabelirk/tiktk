@@ -1,0 +1,58 @@
+.videoFooter {
+  position: relative;
+  bottom: 20%;
+  color: white;
+  margin-left: 20px;
+}
+
+.videoFooter__text h3 {
+  padding-bottom: 20px;
+}
+
+.videoFooter__text p {
+  padding-bottom: 20px;
+}
+
+.videoFooter__music {
+  display: flex;
+}
+
+.videoFooterMusic__text {
+  width: 80%;
+  overflow-x: hidden; /*esconder o texto quando estiver fora da caixinha do pai*/
+}
+
+/* animação deve ocorrer somente no texto, em relação ao seu pai, que é a caixa de texto*/
+.videoFooterMusic__text p {
+  animation: moveTheText 3s infinite linear;
+}
+
+.videoFooter__record {
+  animation: spinTheRecord 4s infinite linear; /*referenciando a animação para o vinil*/
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  height: 50px;
+  filter: invert(1); /* para mudar a cor do vinil para brando*/
+}
+
+/*
+animação do disco girando*/
+@keyframes spinTheRecord {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*animação do texto da música*/
+@keyframes moveTheText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

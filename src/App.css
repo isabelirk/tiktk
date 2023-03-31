@@ -14,7 +14,7 @@ html {
   max-height: 700px;
   width: 80%;
   max-width: 450px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   border-radius: 20px;
   overflow: scroll;
   scroll-snap-type: y mandatory;
